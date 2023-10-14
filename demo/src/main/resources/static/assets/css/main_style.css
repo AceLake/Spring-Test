@@ -1,0 +1,11 @@
+body 
+{
+    overflow: scroll;
+    display: inline-block;
+    transform: scale(.95);
+}
+
+.collapse.navbar-collapse
+{
+    background-color:#53364A;
+}

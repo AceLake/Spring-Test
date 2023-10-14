@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>	
+		
+		<title>Thymeleaf Common Fragments</title>
+	</head>
+	
+	<body>
+		<!-- Common Header Fragment -->
+		<div th:fragment="header">
+			<div class="bs-example">
+			    <nav  class="navbar navbar-default">
+			        <!-- Brand and toggle get grouped for better mobile display -->
+			        <div class="navbar-header" style="background-color:#53364A;">
+			            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+			                <span class="sr-only">Toggle navigation</span>
+			                <span class="icon-bar"></span>
+			                <span class="icon-bar"></span>
+			                <span class="icon-bar"></span>
+			            </button>
+			            <a href="#" style="padding: 10px;" class="navbar-brand"><img style="width: 30px;" th:src="@{/images/Genesis-Logo (icon).png}"/></a>
+			        </div>
+			        <!-- Collection of nav links and other content for toggling -->
+			        <div id="navbarCollapse" class="collapse navbar-collapse" style="background-color:#53364A;">
+			            <ul class="nav navbar-nav">
+			                <li><a style= "color: rgb(250, 236, 216);" href="/store/">Store</a></li>
+			            </ul>
+						<ul class="nav navbar-nav">
+			                <li><a style= "color: rgb(250, 236, 216);" href="/register/">Register</a></li>
+			            </ul>
+			            <ul class="nav navbar-nav navbar-right">
+			                <li><a style= "color: rgb(250, 236, 216);" href="/login/">Login</a></li>
+			            </ul>
+			        </div>
+			    </nav>
+			</div>
+			
+			<!-- Page Title and Logo -->
+			<h2 th:text="${title}">Default Message Text</h2><br/>
+			<div >
+				<img style="width: 200px;" th:src="@{/images/Genesis-Logo (With Title).png}"/><br/><br/>							
+			</div>
+
+		</div>
+		
+		<!--  Common Footer Fragment -->
+		<div th:fragment="footer">
+			<h5 style="color:purple; text-align: center;position: fixed;bottom: 0;width: 100%;">Copyright 2020 Grand Canyon University</h5>
+		</div>
+	</body>
+</html>
+

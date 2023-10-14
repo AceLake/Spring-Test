@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World! I will rule you just you wait!</h1>
+    <table style="width:50%" layout:fragment="content">
+        <br>       
+        <thead>
+            <tr>
+                <th style="text-align:center">Name</th>
+                <th style="text-align:center">Number</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:if="${strings.empty}">
+                <td style="text-align:center" colspan="4"> No Orders Available</td>
+            </tr>
+            <tr th:each="string : ${strings}" align="center">           
+                <td style="padding-top: 11px;" th:text="${string.getName()}">Game Title</td>
+                <td type="number" th:text="${string.getInteger()}"></td>																
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
